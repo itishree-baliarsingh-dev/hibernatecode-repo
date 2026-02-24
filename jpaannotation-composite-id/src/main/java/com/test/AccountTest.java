@@ -22,8 +22,8 @@ public class AccountTest {
 			et.begin();
 
 			AccountPK pk = new AccountPK();
-			pk.setAccountNumber("800334232");
-			pk.setIfscCode("HDFCO0122");
+			pk.setAccountNumber("80033423287");
+			pk.setIfscCode("HDFCO012298");
 
 			Account account = new Account();
 			account.setId(pk);
