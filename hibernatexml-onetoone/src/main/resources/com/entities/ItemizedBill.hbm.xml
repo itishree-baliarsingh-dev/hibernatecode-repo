@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.entities">
+	<class name="ItemizedBill" table="itemized_bill">
+		<id name="billNo" column="bill_no">
+			<generator class="foreign">
+				<param name="property">bill</param>
+			</generator>
+		</id>
+		<property name="localMessages" column="local_messages" />
+		<property name="internationalMessages"
+			column="international_messages" />
+		<property name="localVoiceMinutes" column="local_voice_mins" />
+		<property name="internationalVoiceMinutes"
+			column="international_voice_mins" />
+		<property name="previousDueAmount" column="previous_due_amt" />
+		<one-to-one name="bill" class="Bill" />
+	</class>
+</hibernate-mapping>

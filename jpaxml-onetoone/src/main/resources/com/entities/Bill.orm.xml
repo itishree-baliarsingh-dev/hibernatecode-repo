@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="3.0"
+	xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence/orm https://jakarta.ee/xml/ns/persistence/orm/orm_3_0.xsd">
+	<package>com.entities</package>
+	<entity class="Bill">
+		<table name="bill" />
+		<attributes>
+			<id name="billNo">
+				<column name="bill_no" />
+				<generated-value strategy="IDENTITY" />
+			</id>
+			<basic name="billGeneratedDate">
+				<column name="bill_generated_dt" />
+			</basic>
+			<basic name="customerName">
+				<column name="customer_nm" />
+			</basic>
+			<basic name="mobileNo">
+				<column name="mobile_no" />
+			</basic>
+			<basic name="dueDate">
+				<column name="due_dt" />
+			</basic>
+			<basic name="billAmount">
+				<column name="bill_amt" />
+			</basic>
+		</attributes>
+	</entity>
+</entity-mappings>

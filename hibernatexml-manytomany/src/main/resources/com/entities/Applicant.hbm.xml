@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.entities">
+	<class name="Applicant" table="applicant">
+		<id name="applicantNo" column="applicant_no">
+			<generator class="identity" />
+		</id>
+		<property name="applicantName" column="applicant_nm" />
+		<property name="experience" />
+		<property name="qualification" />
+		<property name="gender" />
+		<property name="age" />
+
+		<set name="appliedJobs" table="job_applicants">
+			<key column="applicant_no" />
+			<many-to-many column="job_no" class="Job" />
+		</set>
+	</class>
+</hibernate-mapping>

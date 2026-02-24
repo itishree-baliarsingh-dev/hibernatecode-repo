@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.entities">
+	<joined-subclass name="AccidentalInsurancePlan"
+		extends="InsurancePlan" table="accidental_insurance_plan">
+		<key column="accidental_insurance_plan_no" />
+		<property name="disabilityCoveragePercentage"
+			column="disability_coverage_percentage" />
+		<property name="internationalCoverage"
+			column="international_coverage" />
+	</joined-subclass>
+</hibernate-mapping>

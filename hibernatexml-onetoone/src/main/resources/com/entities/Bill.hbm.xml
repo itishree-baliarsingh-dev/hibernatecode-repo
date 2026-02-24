@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.entities">
+	<class name="Bill" table="bill">
+		<id name="billNo" column="bill_no">
+			<!--<generator class="increment" /> -->
+			<generator class="identity" />
+		</id>
+		<property name="billGeneratedDate" column="bill_generated_dt" />
+		<property name="customerName" column="customer_nm" />
+		<property name="mobileNo" column="mobile_no" />
+		<property name="dueDate" column="due_dt" />
+		<property name="billAmount" column="bill_amt" />
+	</class>
+</hibernate-mapping>

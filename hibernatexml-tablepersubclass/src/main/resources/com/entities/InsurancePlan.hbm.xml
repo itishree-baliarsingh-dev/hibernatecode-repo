@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.entities">
+	<class name="InsurancePlan" table="insurance_plan">
+		<id name="planNo" column="plan_no">
+			<generator class="identity" />
+		</id>
+		<property name="planName" column="plan_nm" />
+		<property name="tenure" />
+		<property name="premiumAmount" column="premium_amt" />
+		<property name="insurredAmount" column="insurred_amt" />
+		<property name="status" />
+	</class>
+</hibernate-mapping>

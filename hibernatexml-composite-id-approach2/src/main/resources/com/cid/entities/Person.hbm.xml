@@ -1,0 +1,13 @@
+
+<hibernate-mapping package="com.cid.entities">
+<class name="Person" table="person">
+		<composite-id name="id">
+			<key-property name="firstName" column="first_nm" />
+			<key-property name="lastName" column="last_nm" />
+		</composite-id>
+		<property name="age" />
+		<property name="gender" />
+		<property name="mobileNo" column="mobile_no" />
+		<property name="emailAddress" column="email_address" />
+	</class>
+</hibernate-mapping>

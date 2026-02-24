@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.entities">
+	<class name="Order" table="restaurant_order">
+		<id name="orderNo" column="order_no">
+			<generator class="identity" />
+		</id>
+		<property name="customerName" column="customer_nm" />
+		<property name="orderedDate" column="ordered_dt" />
+		<property name="mobileNo" column="mobile_no" />
+		<property name="emailAddress" column="email_address" />
+		<property name="amount" />
+	</class>
+</hibernate-mapping>

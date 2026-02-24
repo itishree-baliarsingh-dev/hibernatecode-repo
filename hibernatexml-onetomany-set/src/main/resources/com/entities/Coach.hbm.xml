@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.entities">
+	<class name="Coach" table="coach">
+		<id name="coachNo" column="coach_no">
+			<generator class="identity" />
+		</id>
+		<property name="coachName" column="coach_nm" />
+		<property name="age" />
+		<property name="gender" />
+		<property name="experience" />
+		<property name="mobileNo" column="mobile_no" />
+		<property name="emailAddress" column="email_address" />
+
+		<set name="players" inverse="true" >
+            <key column="coach_no" not-null="true"/>
+            <one-to-many class="Player"/>
+		</set>
+	</class>
+</hibernate-mapping>

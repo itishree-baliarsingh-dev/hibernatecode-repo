@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.entities">
+	<class name="Project" table="project">
+		<id name="projectNo" column="project_no">
+			<generator class="identity" />
+		</id>
+		<property name="description" />
+		<property name="workType" column="work_type" />
+		<property name="estimatedDays" column="estimated_days" />
+		<property name="estimatedAmount" column="estimated_amt" />
+	</class>
+</hibernate-mapping>

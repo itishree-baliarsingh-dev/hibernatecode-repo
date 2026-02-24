@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="3.0"
+	xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence/orm https://jakarta.ee/xml/ns/persistence/orm/orm_3_0.xsd">
+	<package>com.entities</package>
+	<entity class="ItemizedBill">
+		<table name="itemized_bill" />
+		<attributes>
+			<id name="billNo">
+				<column name="bill_no" />
+			</id>
+
+			<basic name="localMessages">
+				<column name="local_messages" />
+			</basic>
+
+			<basic name="internationalMessages">
+				<column name="international_messages" />
+			</basic>
+
+			<basic name="localVoiceMinutes">
+				<column name="local_voice_mins" />
+			</basic>
+
+			<basic name="internationalVoiceMinutes">
+				<column name="international_voice_mins" />
+			</basic>
+
+			<basic name="previousDueAmount">
+				<column name="previous_due_amt" />
+			</basic>
+
+			<one-to-one name="bill" optional="false">
+				<join-column name="bill_no"
+					referenced-column-name="bill_no" insertable="false"
+					updatable="false" />
+			</one-to-one>
+
+		</attributes>
+	</entity>
+</entity-mappings>

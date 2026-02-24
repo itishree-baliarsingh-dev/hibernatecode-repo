@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.entities">
+	<class name="Restaurant" table="restaurant">
+		<id name="restaurantNo" column="restaurant_no">
+			<generator class="identity" />
+		</id>
+		<property name="restaurantName" column="restaurant_nm" />
+		<property name="cuisine" />
+		<property name="contactNo" column="contact_no" />
+		<property name="rating" />
+
+		<list name="orders">
+			<key column="restaurant_no" not-null="false" />
+			<list-index column="order_index" base="1" />
+			<one-to-many class="Order" />
+		</list>
+	</class>
+</hibernate-mapping>

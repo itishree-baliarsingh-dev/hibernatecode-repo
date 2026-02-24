@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="3.0"
+	xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence/orm https://jakarta.ee/xml/ns/persistence/orm/orm_3_0.xsd">
+	<package>com.entities</package>
+	<entity class="Trip">
+		<table name="trip" />
+		<attributes>
+			<id name="tripNo">
+				<column name="trip_no" />
+				<generated-value strategy="SEQUENCE"
+					generator="seqgen" />
+				<sequence-generator name="seqgen"
+					sequence-name="trip_seq" allocation-size="1" />
+			</id>
+			<basic name="source">
+				<column name="source" />
+			</basic>
+			<basic name="destination">
+				<column name="destination" />
+			</basic>
+			<basic name="tripName">
+				<column name="trip_nm" />
+			</basic>
+			<basic name="days">
+				<column name="days" />
+			</basic>
+			<basic name="startDate">
+				<column name="start_dt" />
+			</basic>
+			<basic name="endDate">
+				<column name="end_dt" />
+			</basic>
+			<basic name="tripCost">
+				<column name="trip_cost" />
+			</basic>
+		</attributes>
+	</entity>
+</entity-mappings>
